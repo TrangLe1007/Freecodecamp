@@ -1,0 +1,12 @@
+function chunkArrayInGroups(arr, size) {
+  var result = [];
+  for (var i = 0; i < arr.length; i += size) 
+  //using the loop to generate numbers we can use as indices to slice the array in the right locations.
+  {
+    result.push(arr.slice(i, i + size));
+    //Inside our loop, create each chunk using arr.slice(i, i+size), and add this value to arr2 with arr2.push()
+  }
+  return result;
+}
+
+ console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
